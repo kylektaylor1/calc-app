@@ -1,7 +1,19 @@
 import React from 'react';
+import { Operator, Action } from '../calc/CalculatorFrame';
 
-export const ResetButton = () => {
+type Props = {
+	dispatch: (operator: { type: Action }) => void;
+};
+
+export const ResetButton = ({ dispatch }: Props) => {
 	return (
-		<div className='bg-orange-300 text-2xl font-mono text-black px-8 py-2 w-full items-center justify-center rounded-lg'>{`Reset`}</div>
+		<button
+			className='flex items-center justify-center py-2 bg-orange-300 text-2xl font-mono text-black text-center w-full rounded-lg hover:bg-orange-400 transition-all'
+			onClick={(e) => {
+				dispatch({ type: `RESET` });
+			}}
+		>
+			<div>{`Reset`}</div>
+		</button>
 	);
 };

@@ -9,8 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "immer": "^9.0.18",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "use-immer": "^0.8.1",
+    "zod": "^3.20.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",
